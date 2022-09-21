@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #添加子应用
+    'users',
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'DjangoTest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '127.0.0.1',  # 数据库主机
+            'PORT': 3306,  # 数据库端口
+            'USER': 'root',  # 数据库用户名
+            'PASSWORD': '36232619',  # 数据库用户密码
+            'NAME': 'djangotest'  # 数据库名字
     }
 }
 
